@@ -1,0 +1,91 @@
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-size: 13px;
+  color: #333;
+  text-align: justify;
+  line-height: 21px;
+}
+
+h1,
+h3 {
+  margin-bottom: 8px;
+}
+
+hr {
+  height: 1px;
+  border-style: none none dotted none;
+  border-color: orange;
+  border-width: 2px;
+  margin: 10px 0;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Outter container CSS */
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 550px;
+  border: 1px solid black;
+  padding: 15px;
+  transform: translate(-50%, -50%);
+}
+
+/* Inner Container 1 CSS */
+#container1 {
+  float: left;
+  width: 40%;
+  padding: 15px 15px 15px 0;
+}
+
+#container1 .bluepicture {
+  width: 100%;
+  height: 200px;
+  background-color: #60a3d0;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Inner Container 2 CSS */
+#container2 {
+  float: left;
+  width: 60%;
+  margin: 15px 0;
+}
+
+#container2 .contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container2 .contentContainer .pinkpicture {
+  background-color: #e7aefc;
+  color: white;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-shrink: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
