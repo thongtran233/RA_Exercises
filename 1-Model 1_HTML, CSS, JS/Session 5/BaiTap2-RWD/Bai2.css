@@ -1,0 +1,133 @@
+/* General CSS */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f9fc;
+}
+
+/* Nav bar */
+nav {
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 50px;
+  align-items: center;
+  padding-left: 40px;
+}
+
+/* Thumbail */
+#thumbail {
+  background-color: white;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+#thumbail #thumbailContainer {
+  min-width: 100px;
+  max-width: 700px;
+  height: 220px;
+  text-align: center;
+}
+
+#thumbail #thumbailContainer * {
+  margin: 10px 0;
+}
+#thumbail #thumbailContainer h2 {
+  font-size: 2.2em;
+  font-weight: 500;
+}
+#thumbail #thumbailContainer p {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  text-align: center;
+  color: grey;
+}
+
+#thumbail #thumbailContainer button {
+  height: 30px;
+  width: 150px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+#thumbail #thumbailContainer button[class*="mainbutton"] {
+  background-color: #007efb;
+}
+#thumbail #thumbailContainer button[class*="secondbutton"] {
+  background-color: #6c757c;
+}
+
+/* Content */
+#content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 25px;
+}
+
+#content .contentContainer {
+  border-radius: 2px;
+  background-color: white;
+  margin: 10px;
+  max-width: 400px;
+  box-shadow: 1px 1px 1px 1px #c3c7ca;
+}
+
+#content .contentThumbail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #54585b;
+  color: white;
+  font-weight: 500;
+  font-size: larger;
+  height: 150px;
+  border-radius: 2px;
+}
+
+#content .contentBody {
+  padding: 10px;
+  text-align: left;
+}
+
+#content .contentBody > p {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+#content .contentBody .contentFooter {
+  align-items: center;
+  height: 20px;
+  padding: 1px;
+}
+
+#content .contentBody .contentFooter button {
+  float: left;
+  width: 35px;
+  background-color: white;
+  border: 0.5px solid lightgray;
+  margin: 0 1px;
+}
+
+#content .contentBody .contentFooter p {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  #content {
+    display: block;
+  }
+
+  #content .contentContainer {
+    min-width: 250px;
+  }
+}
