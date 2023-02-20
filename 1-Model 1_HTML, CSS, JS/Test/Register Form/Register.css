@@ -1,0 +1,70 @@
+/* General CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #6f08ad;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Container */
+#container {
+  width: 450px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+#container h1,
+p {
+  text-align: center;
+  padding: 10px;
+}
+
+/* input Form CSS */
+#container input {
+  height: 40px;
+  padding: 0 10px;
+  margin: 5px 3px;
+  background-color: #eaeceb;
+}
+#container input[id*="FirstName"],
+input[id*="LastName"] {
+  border: #ededed;
+  width: 186px;
+}
+
+#container input[id*="Username"],
+input[id*="Email"],
+input[id*="Password"],
+input[id*="Submit"] {
+  width: 382px;
+  border: #ededed;
+}
+
+/* Check box CSS */
+#container input[id*="Agree"] {
+  height: 12px;
+  border: #ededed;
+}
+.agreement {
+  margin: 0 5px;
+  font-size: smaller;
+}
+
+/* Submit button CSS */
+#container input[id*="Submit"] {
+  background-color: #3498ed;
+  color: white;
+  border: #ededed;
+}

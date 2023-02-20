@@ -1,0 +1,78 @@
+/* General */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.center {
+  position: relative;
+  left: 50%;
+  top: 40px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #aa44b1 0%, #f5419a 100%);
+  text-align: center;
+}
+
+/* Container */
+#container {
+  background-color: white;
+  width: 350px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Form Header */
+#container h1 {
+  padding: 30px;
+}
+
+/* Form login signup button */
+#container .loginButton button {
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: #eaeaea 2px solid;
+}
+
+#container .loginButton .login {
+  background: linear-gradient(to right, #aa44b1 0%, #f5419a 100%);
+  color: white;
+}
+#container .loginButton .signup {
+  background-color: white;
+  color: black;
+}
+
+/* Input form CSS */
+#container input {
+  width: 310px;
+  height: 35px;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 0 5px;
+  border: #eaeaea 2px solid;
+}
+
+/* Forget password */
+#container .forgot {
+  text-align: left;
+  color: #d5aec1;
+  padding: 0 10px;
+}
+
+/* login button */
+#container input[type*="submit"] {
+  background: linear-gradient(to right, #aa44b1 0%, #f5419a 100%);
+  color: white;
+  margin: 20px 0;
+}
+
+/* Signup CSS */
+#container .signup {
+  color: #d5aec1;
+}
