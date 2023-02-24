@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  width: 70%;
+  height: 400px;
+  margin: auto;
+}
+
+#container p,
+h3 {
+  line-height: 25px;
+  margin: 0 0 15px 0;
+}
+
+#container h1 {
+  line-height: 40px;
+  text-align: center;
+  margin: 5px 0 30px 0;
+}
+
+#container .leftColumn {
+  float: left;
+  width: 40%;
+  height: 400px;
+  padding: 30px;
+  border: 1px solid #ededed;
+  box-shadow: 0px 0px 20px 5px #ebebeb;
+}
+
+#container .rightColumn {
+  float: left;
+  width: 60%;
+  padding: 0 40px 40px 40px;
+}
+
+.important {
+  font-weight: bold;
+}

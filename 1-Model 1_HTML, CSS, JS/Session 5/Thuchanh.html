@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thuchanh</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #ededed;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      nav {
+        margin-bottom: 50px;
+        padding: 0 20px;
+      }
+
+      /* Bai1 */
+      nav#Bai1 {
+        display: flex;
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      nav#Bai1 .logo {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+      }
+
+      nav#Bai1 .link {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
+
+      /* Bai2 */
+      nav#Bai2 {
+        background-color: black;
+        color: white;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      nav#Bai2 .logo {
+        display: flex;
+        align-items: center;
+        height: 70%;
+        width: 180px;
+        margin-right: 20px;
+        border-right: 2px solid white;
+      }
+
+      nav#Bai2 .link {
+        font-size: smaller;
+        font-weight: 700;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      nav#Bai2 a {
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+      }
+
+      nav#Bai2 a:hover {
+        background-color: #3d3d3d;
+        color: orange;
+      }
+
+      nav#Bai2 .search {
+        color: black;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav#Bai2 .search:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Bai 1 -->
+    <nav id="Bai1">
+      <div class="logo"><h2>Logo</h2></div>
+      <div class="link">
+        <p>Link 1</p>
+        <p>Link 2</p>
+        <p>Link 3</p>
+        <p>Link 4</p>
+        <p>Link 5</p>
+      </div>
+    </nav>
+
+    <!-- Bai 2 -->
+    <nav id="Bai2">
+      <div class="logo"><h2>*CSS-TRICKS</h2></div>
+      <div class="link">
+        <i class="fa-brands fa-digital-ocean fa-2xl"></i>
+        <p>
+          Powrered by <br />
+          DigitalOcean
+        </p>
+        <a href="#"><p>ARTICLE</p></a>
+        <a href="#"><p>VIDEOS</p></a>
+        <a href="#"><p>ALMANAC</p></a>
+        <a href="#"><p>NEWSLETTER</p></a>
+        <a href="#"><p>GUIDES</p></a>
+        <a href="#"><p>DIGITALOCEAN</p></a>
+        <a href="#"><p>DO COMMUNITY</p></a>
+      </div>
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </nav>
+  </body>
+</html>

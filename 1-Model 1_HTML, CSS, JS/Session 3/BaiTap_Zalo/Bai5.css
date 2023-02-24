@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  width: 80%;
+  height: 400px;
+  background-color: #ededed;
+  text-align: center;
+  padding: 20px;
+}
+
+#container input,
+select {
+  width: 45%;
+  height: 35px;
+  margin: 10px 4px;
+  padding: 0 15px;
+  border: none;
+}
+
+#container textarea {
+  width: 92%;
+  height: 150px;
+  padding: 15px 15px;
+}
+
+#container input[type*="submit"] {
+  background-color: black;
+  color: white;
+  width: 92%;
+}
