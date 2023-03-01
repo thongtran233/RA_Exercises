@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 400px;
+  height: 350px;
+  border: 5px solid black;
+  padding: 10px;
+}
+
+#container #display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  font-size: 35px;
+  padding: 8px;
+}
+#container #button {
+  height: 250px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  gap: 15px;
+  font-size: 2rem;
+}
+
+#container #button .calButton,
+.clearButton {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220, 84, 0);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+#container #button .calButton:hover,
+.clearButton:hover {
+  background-color: rgb(220, 169, 0);
+  cursor: pointer;
+}
