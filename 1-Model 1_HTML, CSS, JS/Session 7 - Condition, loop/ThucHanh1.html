@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bai 1
+      //   let number = parseInt(prompt("Nhập vào số nguyên: "));
+
+      //   if (number % 2 == 0) {
+      //     console.log("Số nguyên là số chẵn");
+      //   } else {
+      //     console.log("Số nguyên là số lẻ");
+      //   }
+
+      // Bai 2
+      //   let year = parseInt(prompt("Nhập vào năm muốn kiểm tra"));
+
+      //   if (year % 4 == 0) {
+      //     if (year % 100 == 0) {
+      //       if (year % 400 == 0) {
+      //         console.log("Năm " + year + " là năm nhuận");
+      //       } else {
+      //         console.log("Năm " + year + " không phải là năm nhuận");
+      //       }
+      //     } else {
+      //       console.log("Năm " + year + " là năm nhuận");
+      //     }
+      //   } else {
+      //     console.log("Năm " + year + " không phải là năm nhuận");
+      //   }
+
+      //   Bai 3
+      //   let price = parseInt(prompt("Nhập vào giá vé xe bus"));
+      //   let age = parseInt(prompt("Nhập vào tuổi của bạn"));
+
+      //   if (age <= 6) {
+      //     console.log("Bạn được miễn phí tiền bus");
+      //   } else if (age > 6 && age <= 18) {
+      //     console.log("Tiền xe bus của bạn là : ", price / 2);
+      //   } else if (age > 18 && age <= 55) {
+      //     console.log("Tiền xe bus của bạn là : ", price);
+      //   } else {
+      //     console.log("Bạn được miễn phí tiền bus");
+      //   }
+
+      // Bai 4
+      //   let lastMonth = parseInt(prompt("Số điện tiêu thụ tháng trước"));
+      //   let thisMonth = parseInt(prompt("Số điện tiêu thụ tháng này"));
+      //   let consumedAmount = thisMonth - lastMonth;
+      //   const price = 10000;
+
+      //   if (consumedAmount > 0 && consumedAmount <= 50) {
+      //     console.log(
+      //       "Tổng tiền điện bạn phải trả: ",
+      //       price + 700 * consumedAmount
+      //     );
+      //   } else if (consumedAmount > 50 && consumedAmount <= 100) {
+      //     console.log(
+      //       "Tổng tiền điện bạn phải trả: ",
+      //       price + 900 * consumedAmount
+      //     );
+      //   } else if (consumedAmount > 100 && consumedAmount <= 150) {
+      //     console.log(
+      //       "Tổng tiền điện bạn phải trả: ",
+      //       price + 1100 * consumedAmount
+      //     );
+      //   } else {
+      //     console.log(
+      //       "Tổng tiền điện bạn phải trả: ",
+      //       price + 1300 * consumedAmount
+      //     );
+      //   }
+
+      //   Bai 5
+      let canhA = parseInt(prompt("Nhập cạnh 1 của tam giác"));
+      let canhB = parseInt(prompt("Nhập cạnh 2 của tam giác"));
+      let canhC = parseInt(prompt("Nhập cạnh 3 của tam giác"));
+
+      let isTriange =
+        canhA + canhB > canhC && canhA + canhC > canhB && canhB + canhC > canhA
+          ? true
+          : false;
+      if (isTriange) {
+        if (canhA == canhB && canhA == canhC) {
+          console.log("Tam giác đều");
+        } else if (canhA == canhB || canhA == canhC || canhB == canhC) {
+          console.log("Tam giác cân");
+        } else {
+          if (
+            Math.pow(canhA, 2) + Math.pow(canhB, 2) == Math.pow(canhC, 2) ||
+            Math.pow(canhA, 2) + Math.pow(canhC, 2) == Math.pow(canhB, 2) ||
+            Math.pow(canhC, 2) + Math.pow(canhB, 2) == Math.pow(canhA, 2)
+          ) {
+            console.log("Tam giác vuông");
+          } else {
+            console.log("Tam  giác bình thường");
+          }
+        }
+      } else {
+        console.log("Không phải là tam giác");
+      }
+    </script>
+  </body>
+</html>
