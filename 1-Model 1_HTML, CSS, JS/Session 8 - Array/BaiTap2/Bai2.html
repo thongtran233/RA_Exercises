@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inputText" />
+    <input type="button" value="Search" id="search" />
+    <div id="result">
+      <table>
+        <tr>
+          <th>Tieng Anh</th>
+          <th>Tieng Viet</th>
+        </tr>
+        <tr>
+          <td class="resultTiengAnh"></td>
+          <td class="resultTiengViet"></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      let tiengAnh = ["Hello", "GoodEvening", "GoodAfternoon"];
+      let tiengViet = ["Xin Chao", "Chao buoi sang", "Chao buoi chieu"];
+      let input = document.querySelector("#inputText");
+      let searchBtn = document.querySelector("#search");
+      let result = document.querySelector("#result");
+      let matches = false;
+
+      searchBtn.addEventListener("click", function () {
+        let text = input.value;
+        if (document.querySelector("p") != null) {
+          document.querySelector("p").remove();
+        }
+
+        for (let i = 0; i < tiengAnh.length; i++) {
+          if (tiengAnh[i].toUpperCase() == text.toUpperCase()) {
+            matches = true;
+            document.querySelector(".resultTiengAnh").textContent = tiengAnh[i];
+            document.querySelector(".resultTiengViet").textContent =
+              tiengViet[i];
+          }
+          break;
+        }
+
+        if (!matches) {
+          result.insertAdjacentHTML("beforeend", "<p>There no match word</p>");
+        }
+      });
+    </script>
+  </body>
+</html>
