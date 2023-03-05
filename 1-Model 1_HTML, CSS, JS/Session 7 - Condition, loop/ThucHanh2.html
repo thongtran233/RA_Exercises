@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bai 1
+      //   let number = parseInt(prompt("Nhập số nguyên"));
+      //   for (let i = 0; i <= number; i++) {
+      //     if (i % 2 == 0) {
+      //       console.log(i);
+      //     }
+      //   }
+
+      // Bai2
+      //   let number = parseInt(prompt("Nhập số nguyên"));
+      //   let tong = 0;
+      //   for (let i = 0; i <= number; i++) {
+      //     tong += i;
+      //   }
+      //   console.log(tong);
+
+      // Bai3
+      //   let a = parseInt(prompt("Nhập số nguyên thứ nhất"));
+      //   let b = parseInt(prompt("Nhập số nguyên thứ hai"));
+      //   let c = parseInt(prompt("Nhập số nguyên thứ ba"));
+
+      //   if (a >= b && b >= c) {
+      //     console.log("Số lớn nhất là " + a);
+      //     console.log("Số bé nhất là " + c);
+      //   }
+
+      //   if (a >= c && c >= b) {
+      //     console.log("Số lớn nhất là " + a);
+      //     console.log("Số bé nhất là " + b);
+      //   }
+
+      //   if (b >= c && c >= a) {
+      //     console.log("Số lớn nhất là " + b);
+      //     console.log("Số bé nhất là " + a);
+      //   }
+
+      //   if (b >= a && a >= c) {
+      //     console.log("Số lớn nhất là " + b);
+      //     console.log("Số bé nhất là " + c);
+      //   }
+
+      //   if (c >= a && a >= b) {
+      //     console.log("Số lớn nhất là " + c);
+      //     console.log("Số bé nhất là " + b);
+      //   }
+
+      //   if (c >= b && b >= a) {
+      //     console.log("Số lớn nhất là " + c);
+      //     console.log("Số bé nhất là " + a);
+      //   }
+
+      // Bai 4
+      //   let number = parseInt(prompt("Nhập số nguyên"));
+      //   for (let i = 0; i <= number; i++) {
+      //     if (number % i == 0) {
+      //       console.log(i);
+      //     }
+      //   }
+
+      // Bai 5
+      //   let number = parseInt(prompt("Nhập số nguyên"));
+      //   let soUocSo = 0;
+      //   for (let i = 0; i <= number; i++) {
+      //     if (number % i == 0) {
+      //       soUocSo++;
+      //     }
+      //   }
+      //   if (soUocSo == 2) {
+      //     console.log(number + " là số nguyên tố");
+      //   } else {
+      //     console.log(number + " không phải là số nguyên tố");
+      //   }
+
+      // Bai 6
+      //   let number = parseInt(prompt("Nhập số nguyên"));
+      //   let tong = 0;
+      //   for (let i = 0; i < number; i++) {
+      //     if (number % i == 0) {
+      //       tong += i;
+      //     }
+      //   }
+      //   if (tong == number) {
+      //     console.log(number + " là số hoàn hảo");
+      //   } else {
+      //     console.log(number + " không phải là số hoàn hảo");
+      //   }
+
+      // Bai 7
+      //   let number = parseInt(prompt("Nhập số nguyên"));
+      //   let temp = number;
+      //   let soDaoNguoc = 0;
+      //   while (temp > 0) {
+      //     soDaoNguoc = soDaoNguoc * 10 + (temp % 10);
+      //     temp = Math.floor(temp / 10);
+      //   }
+      //   console.log("Số đảo ngược của " + number + " là số : " + soDaoNguoc);
+
+      //   Bai 8
+      //   let number = parseInt(prompt("Nhập số nguyên"));
+      //   let tong = 0;
+
+      //   while (number > 0) {
+      //     tong += number;
+      //     number = parseInt(prompt("Nhập số nguyên"));
+      //   }
+      //   console.log("Tổng = ", tong);
+
+      //   Bai 9
+      //   let tienGuiBanDau = parseFloat(prompt("Nhập số tiền gửi"));
+      //   let laiSuat = parseFloat(prompt("Nhập số lãi suất 1 năm")) / 100;
+      //   let soThangGui = parseFloat(prompt("Nhập số tháng gửi"));
+      //   let tienLai = 0;
+
+      //   for (let i = 1; i <= soThangGui; i++) {
+      //     tienLai = (laiSuat * tienGuiBanDau) / 12;
+
+      //     console.log(
+      //       "Tháng " +
+      //         i +
+      //         "- Tiền gửi: " +
+      //         tienGuiBanDau +
+      //         ", tiền lãi: " +
+      //         tienLai
+      //     );
+      //     tienGuiBanDau += tienLai;
+      //   }
+
+      //   Bai 10
+      let number = parseInt(prompt("Nhập số nguyên"));
+      let result = "";
+
+      for (let i = 0; i <= number; i++) {
+        let soUocSo = 0;
+        for (let j = 0; j <= i; j++) {
+          if (i % j == 0) {
+            soUocSo++;
+          }
+        }
+
+        if (soUocSo == 2) {
+          result += i + " ";
+        }
+      }
+
+      console.log("Các số nguyên tố là : " + result);
+    </script>
+  </body>
+</html>
