@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bai 1
+      //   let myColor = ["Red", "Green", "White", "Black"];
+      //   console.log(myColor.join(","));
+
+      //   Bai 2
+      //   let number = prompt("Nhap vao 1 so ");
+      //   let array = number.split("");
+      //   for (let i = 0; i < array.length; i++) {
+      //     if (array[i] % 2 == 0 && array[i + 1] % 2 == 0) {
+      //       array[i + 1] = "-" + array[i + 1];
+      //     }
+      //   }
+      //   console.log(array.join(""));
+
+      // Bai 3
+      let input = prompt("Nhap vao 1 cau van ");
+      const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const LOWER = "abcdefghijklmnopqrstuvwxyz";
+      let result = [];
+
+      for (let i = 0; i < input.length; i++) {
+        if (UPPER.includes(input[i])) {
+          result.push(input[i].toLowerCase());
+        } else if (LOWER.includes(input[i])) {
+          result.push(input[i].toUpperCase());
+        } else {
+          result.push(input[i]);
+        }
+      }
+      console.log(result.join(""));
+    </script>
+  </body>
+</html>
