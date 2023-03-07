@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrInt = [];
+      let row = parseInt(prompt("Nhap vao so hang cua mang"));
+      let col = parseInt(prompt("Nhap vao so cot cua mang"));
+
+      //   Cau a
+      for (let i = 0; i < row; i++) {
+        let arrIntChild = [];
+        for (let j = 0; j < col; j++) {
+          let num = prompt(
+            `Nhap vao gia tri ${i + 1}${j + 1} cua mang 2 chieu`
+          );
+          arrIntChild.push(num);
+        }
+        arrInt.push(arrIntChild);
+      }
+
+      //   Cau b
+      //   for (let i = 0; i < arrInt.length; i++) {
+      //     for (let j = 0; j < arrInt[i].length; j++) {
+      //       console.log(
+      //         "Gia tri " + (i + 1) + " - " + (j + 1) + " :" + arrInt[i][j]
+      //       );
+      //     }
+      //   }
+
+      // Cau c
+      //   for (let i = 0; i < arrInt.length; i++) {
+      //     for (let j = 0; j < arrInt[i].length; j++) {
+      //       if (
+      //         j == 0 ||
+      //         i == 0 ||
+      //         j == arrInt.length - 1 ||
+      //         i == arrInt.length - 1
+      //       ) {
+      //         console.log(
+      //           "Gia tri " + (i + 1) + " - " + (j + 1) + " :" + arrInt[i][j]
+      //         );
+      //       }
+      //     }
+      //   }
+
+      //   Cau d
+      let duongCheoChinh = [];
+      let duongCheoPhu = [];
+      for (let i = 0; i < arrInt.length; i++) {
+        for (let j = 0; j < arrInt[i].length; j++) {
+          if (i == j) {
+            duongCheoChinh.push(arrInt[i][j]);
+          }
+
+          if (row == col) {
+            if (i + j == row - 1) {
+              duongCheoPhu.push(arrInt[i][j]);
+            }
+          }
+        }
+      }
+      console.log("Duong cheo chinh: " + duongCheoChinh);
+      if (row != col) {
+        console.log("Khong co duong cheo phu");
+      } else {
+        console.log("Duong cheo phu :" + duongCheoPhu);
+      }
+
+      //   Cau e
+      //   for (let i = 0; i < arrInt.length; i++) {
+      //     for (let j = 0; j < arrInt[i].length; j++) {
+      //       for (let k = 0; k < arrInt[i].length; k++) {
+      //         if (arrInt[i][k] > arrInt[i][k + 1]) {
+      //           let temp = arrInt[i][k];
+      //           arrInt[i][k] = arrInt[i][k + 1];
+      //           arrInt[i][k + 1] = temp;
+      //         }
+      //       }
+      //     }
+      //   }
+      //   console.log(arrInt);
+
+      for (let i = 0; i < arrInt.length; i++) {
+        arrInt[i].sort((a, b) => a - b);
+      }
+      console.log(arrInt);
+    </script>
+  </body>
+</html>
