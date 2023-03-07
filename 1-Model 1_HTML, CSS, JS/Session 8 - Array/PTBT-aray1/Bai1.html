@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrayInt = [];
+      let sum1 = 0;
+      let sum2 = 0;
+
+      // Cau a
+      for (let i = 0; i < 5; i++) {
+        let num = parseInt(prompt(`Nhập vào phần tử ${i + 1} của mảng`));
+
+        arrayInt.push(num);
+      }
+
+      //   // Cau b
+      //   for (let i = 0; i < arr.length; i++) {
+      //     console.log(`Giá trị thứ ${i + 1} của mảng: ${arrayInt[i]}`);
+      //     // Cau c
+      //     console.log("Các phần tử có giá trị chẵn");
+      //     if (arrayInt[i] % 2 == 0) {
+      //       console.log(arrayInt[i]);
+      //       sum1 += arrayInt[i];
+      //     }
+      //     // Cau d
+      //     console.log("Các phần tử có trị số lẻ");
+      //     if (i % 2 != 0) {
+      //       console.log(arrayInt[i]);
+      //       sum2 += arrayInt[i];
+      //     }
+      //   }
+      //   console.log("Tổng các giá trị chẵn: " + sum1);
+      //   console.log("Tổng các giá trị có trị số lẻ: " + sum2);
+
+      // Cau e
+      //   console.log("Cac Phan tu la so nguyen to");
+      //   for (let i = 0; i < arrayInt.length; i++) {
+      //     let soNguyenTo = true;
+      //     for (let j = 2; j < arrayInt[i]; j++) {
+      //       if (arrayInt[i] % j == 0) {
+      //         soNguyenTo = false;
+      //         break;
+      //       }
+      //     }
+
+      //     if (soNguyenTo && arrayInt[i] > 2) {
+      //       console.log(arrayInt[i]);
+      //     }
+      //   }
+
+      // Cau f
+      //   let max = arrayInt[0];
+      //   let min = arrayInt[0];
+
+      //   for (let i = 0; i < arrayInt.length; i++) {
+      //     if (arrayInt[i] > max) {
+      //       max = arrayInt[i];
+      //     }
+      //     if (arrayInt[i] < min) {
+      //       min = arrayInt[i];
+      //     }
+      //   }
+      //   console.log("Gia tri lon nhat : " + max);
+      //   console.log("Gia tri nho nhat : " + min);
+
+      //   Cau g
+      //   console.log(arrayInt);
+      //   for (let i = 0; i < arrayInt.length; i++) {
+      //     for (let j = 0; j < arrayInt.length; j++) {
+      //       if (arrayInt[j] < arrayInt[j + 1]) {
+      //         let temp = arrayInt[j];
+      //         arrayInt[j] = arrayInt[j + 1];
+      //         arrayInt[j + 1] = temp;
+      //       }
+      //     }
+      //   }
+      //   console.log(arrayInt);
+
+      //   // Cau h
+      //   let num = parseInt(prompt("Nhap vao gia tri muon kiem tra"));
+      //   let tong = 0;
+      //   for (let i = 0; i < arrayInt.length; i++) {
+      //     if (arrayInt[i] == num) {
+      //       tong++;
+      //     }
+      //   }
+      //   console.log("So phan tu co gia tri bang  " + num + " la : " + tong);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = parseInt(prompt("Nhap vao so nguyen thu 1"));
+      let num2 = parseInt(prompt("Nhap vao so nguyen thu 2"));
+      let array = [];
+
+      if (num1 > num2) {
+        for (let i = num2 + 1; i < num1; i++) {
+          array.push(i);
+        }
+      } else {
+        for (let i = num1 + 1; i < num2; i++) {
+          array.push(i);
+        }
+      }
+
+      console.log(array);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let style = ["Jazz", "Blues"];
+      // Cau a
+      style.push("Rock'n'Roll");
+
+      //   Cau b
+      if (style.length % 2 != 0) {
+        style[Math.floor(style.length / 2)] = "Classics";
+      }
+      console.log(style);
+
+      //   Cau C
+      style.shift();
+      console.log(style);
+
+      //   Cau D
+      style.unshift("Rap", "Reggae");
+      console.log(style);
+    </script>
+  </body>
+</html>

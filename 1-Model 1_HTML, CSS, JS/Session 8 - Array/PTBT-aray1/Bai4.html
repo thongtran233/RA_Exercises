@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+      let value;
+      let cancel = "cancel";
+
+      //   Cau a
+      do {
+        value = prompt("Moi nhap gia tri cua mang");
+        if (
+          value.toUpperCase() !== cancel.toUpperCase() &&
+          !isNaN(parseInt(value)) &&
+          value != ""
+        ) {
+          array.push(value);
+        }
+      } while (
+        value.toUpperCase() !== cancel.toUpperCase() &&
+        !isNaN(parseInt(value)) &&
+        value != ""
+      );
+      console.log(array);
+
+      //   Cau b
+
+      let max = array[0];
+      let min = array[0];
+      let sum = 0;
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+          max = array[i];
+        }
+        if (array[i] < min) {
+          min = array[i];
+        }
+        sum += parseInt(array[i]);
+      }
+      console.log("Tong : " + sum);
+      console.log("Gia tri lon nhat : " + max);
+      console.log("Gia tri nho nhat : " + min);
+    </script>
+  </body>
+</html>
