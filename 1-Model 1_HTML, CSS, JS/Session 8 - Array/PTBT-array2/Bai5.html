@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let string = prompt("Nhap moi day so, ngan cach nhau bang dau ','");
+      let number = string.split(",");
+      let min = parseInt(number[0]);
+      for (let i = 0; i < number.length; i++) {
+        if (min > parseInt(number[i])) {
+          min = parseInt(number[i]);
+        }
+      }
+      console.log(min);
+    </script>
+  </body>
+</html>

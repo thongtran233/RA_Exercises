@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("Nhap vao 1 cau van ");
+      const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const LOWER = "abcdefghijklmnopqrstuvwxyz";
+      let result = [];
+
+      for (let i = 0; i < input.length; i++) {
+        if (UPPER.includes(input[i])) {
+          result.push(input[i].toLowerCase());
+        } else if (LOWER.includes(input[i])) {
+          result.push(input[i].toUpperCase());
+        } else {
+          result.push(input[i]);
+        }
+      }
+      console.log(result.join(""));
+    </script>
+  </body>
+</html>

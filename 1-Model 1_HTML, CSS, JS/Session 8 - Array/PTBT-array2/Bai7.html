@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 7.1
+      let array = [5, 7, 300, 90, 24, 50, 75];
+      let max = array[0];
+      console.log("Xin chao, day la kich thuoc dan cuu cua toi:");
+      console.log(array);
+
+      // 7.2
+      for (let i = 0; i < array.length; i++) {
+        if (max < array[i]) {
+          max = array[i];
+        }
+      }
+      console.log(
+        `Con cuu lon nhat cua toi co kich thuoc ${max}, hay cao long no`
+      );
+
+      //   7.3
+      let daCaoLong = array.indexOf(max);
+      let newArray = [];
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] == max) {
+          newArray.push(8);
+        } else {
+          newArray.push(array[i]);
+        }
+      }
+      console.log("Sau khi cao long, day la dan cua toi");
+      console.log(newArray);
+
+      //   7.4,7.5,7.6
+      let generalArray = [];
+      let newGeneralArray = [];
+      let newArray2 = [];
+      for (let j = 0; j < array.length; j++) {
+        newArray2.push(newArray[j]);
+      }
+      generalArray.push(newArray2);
+      console.log(generalArray);
+      for (let i = 0; i < 3; i++) {
+        console.log("THANG " + (i + 1));
+        // Sao chep 1 array moi cho tung thang
+
+        // Gia tang kich thuoc cua dan len 50
+        for (let j = 0; j < generalArray[i].length; j++) {
+          generalArray[i][j] += 50;
+        }
+        console.log(
+          "Da mot thang troi qua, bay cuu cua toi da lon, day la kich thuoc cua chung"
+        );
+        console.log(generalArray[i]);
+
+        // Tim con cuu lon nhat
+        let newMax = generalArray[i][0];
+        for (let j = 0; j < generalArray[i].length; j++) {
+          if (newMax < generalArray[i][j]) {
+            newMax = generalArray[i][j];
+          }
+        }
+        console.log(
+          `Con cuu lon nhat cua toi co kich thuoc ${newMax}, hay cao long no`
+        );
+
+        // Cao long cuu, Thay gia tri lon nhat bang 8
+        let newArray3 = [];
+        for (let j = 0; j < generalArray[i].length; j++) {
+          if (generalArray[i][j] == newMax) {
+            newArray3.push(8);
+          } else {
+            newArray3.push(generalArray[i][j]);
+          }
+        }
+        newGeneralArray.push(newArray3);
+        generalArray.push(newArray3);
+        console.log("Sau khi cao long, day la dan cua toi");
+        console.log(newGeneralArray[i]);
+      }
+
+      //   7.7
+      let sum = 0;
+      for (
+        let i = 0;
+        i < newGeneralArray[newGeneralArray.length - 1].length;
+        i++
+      ) {
+        sum += parseInt(newGeneralArray[newGeneralArray.length - 1][i]);
+      }
+      console.log(`Dan cua toi bay gio co kich thuoc ${sum}`);
+      console.log(`toi se lay ${sum} * 2$ = ${sum * 2}`);
+    </script>
+  </body>
+</html>
