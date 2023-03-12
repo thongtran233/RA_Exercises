@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bai 1
+      let hello = function () {
+        console.log("Xin chao Rikkei Academy");
+      };
+      hello();
+
+      // Bai 2
+      let power = function (number) {
+        return number * number;
+      };
+      console.log(power(3));
+
+      // Bai 3
+      let century = function (year) {
+        century = Math.floor(5 / 100) + 1;
+
+        return century;
+      };
+      console.log(century(1850));
+
+      //   Bai 4
+      let string = "Toi la tran Minh Thong";
+      let string10 = function (someString) {
+        let char = "";
+        for (let i = 0; i < 10; i++) {
+          char += string[i];
+        }
+        return char + "...";
+      };
+
+      console.log(string10(string));
+
+      //   Bai 5
+      let text = "rikkei";
+
+      let standardlizer = function (someText) {
+        let char = "";
+        for (let i = 0; i < someText.length; i++) {
+          if (i == 0) {
+            char += someText[i].toUpperCase();
+          } else {
+            char += someText[i].toLowerCase();
+          }
+        }
+        return char;
+      };
+
+      console.log(standardlizer(text));
+
+      //   Bai 6
+      let array = [1, 2, 3, 4, 5, 6];
+
+      let findMax = function (someArray) {
+        let max = someArray[0];
+        for (let i = 0; i < someArray.length; i++) {
+          if (max < someArray[i]) {
+            max = someArray[i];
+          }
+        }
+        return max;
+      };
+      console.log(findMax(array));
+
+      //   Bai 7
+      let number2 = parseInt(prompt("Nhap vao 1 so nguyen"));
+
+      let checkEven = function (someNumber) {
+        if (someNumber % 2 == 0) {
+          console.log(someNumber + " la so chan");
+        } else {
+          console.log(someNumber + " la so le");
+        }
+      };
+
+      let checkNguyenTo = function (someNumber) {
+        if (someNumber <= 2) {
+          console.log(someNumber + " khong phai la so nguyen to");
+        } else {
+          let isNguyenTo = true;
+          for (let i = 2; i < someNumber; i++) {
+            if (someNumber % i == 0) {
+              isNguyenTo = false;
+              console.log(someNumber + " khong phai la so nguyen to");
+              break;
+            }
+          }
+          if (isNguyenTo) {
+            console.log(someNumber + " la so nguyen to");
+          }
+        }
+      };
+
+      let checkHoanHao = function (someNumber) {
+        let sum = 0;
+        for (let i = 1; i < someNumber; i++) {
+          if (someNumber % i == 0) {
+            sum += i;
+          }
+        }
+        if (sum == someNumber) {
+          console.log(someNumber + " la so hoan hao");
+        } else {
+          console.log(someNumber + " khong phai la so hoan hao");
+        }
+      };
+
+      checkEven(number2);
+      checkNguyenTo(number2);
+      checkHoanHao(number2);
+      // Bai 8
+      //   let average = function (someArray) {
+      //     let sum = 0;
+      //     for (let i = 0; i < someArray.length; i++) {
+      //       sum += someArray[i];
+      //     }
+
+      //     return sum / someArray.length;
+      //   };
+
+      //   console.log(average(array));
+
+      //   Bai 9
+      //   let number = parseInt(prompt("Nhap vao 1 so nguyen"));
+      //   let inSoNguyenTo = function (someNumber) {
+      //     if (someNumber <= 2) {
+      //       console.log("khong co so nguyen to nao");
+      //     } else {
+      //       console.log("Cac so nguyen to la");
+      //       for (let i = 3; i <= someNumber; i++) {
+      //         let isNguyenTo = true;
+      //         for (let j = 2; j <= i - 1; j++) {
+      //           if (i % j == 0) {
+      //             isNguyenTo = false;
+      //             break;
+      //           }
+      //         }
+
+      //         if (isNguyenTo) {
+      //           console.log(i);
+      //         }
+      //       }
+      //     }
+      //   };
+
+      //   inSoNguyenTo(number);
+    </script>
+  </body>
+</html>
