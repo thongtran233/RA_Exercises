@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h3>Add New Product</h3>
+      <input type="text" name="AddProduct" id="addProduct" />
+      <button id="addBtn" onclick="add()">Add</button>
+    </div>
+
+    <div>
+      <h3>Display All Product</h3>
+      <table id="display"></table>
+    </div>
+
+    <script>
+      let product = document.querySelector("#addProduct");
+      let addBtn = document.querySelector("#addBtn");
+      let renderResult = document.querySelector("#display");
+      let productList = [];
+
+      function add() {
+        productList.push(product.value);
+        render();
+      }
+
+      function render() {
+        let result = "";
+        for (let i = 0; i < productList.length; i++) {
+          result += `
+              <tr>
+                <td>${productList[i]}</td>
+                <td><button onclick = "edit(${i})">Edit</button></td>
+                <td><button onclick = "deleteBtn(${i})">Delete</button></td>
+              </tr>
+              `;
+        }
+
+        renderResult.innerHTML = result;
+      }
+
+      function edit(id) {
+        let input = prompt("Nhap lai ten san pham");
+        productList.splice(id, 1, input);
+        render();
+      }
+
+      function deleteBtn(id) {
+        productList.splice(id, 1);
+        render();
+      }
+    </script>
+  </body>
+</html>
