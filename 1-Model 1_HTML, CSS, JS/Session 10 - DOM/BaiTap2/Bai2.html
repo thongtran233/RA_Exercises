@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result">
+      <span id="minute">10</span> :
+      <span id="seconds">00</span>
+    </div>
+
+    <script>
+      // let hour = document.querySelector("#hour");
+      let minute = document.querySelector("#minute").innerHTML;
+      let seconds = document.querySelector("#seconds").innerHTML;
+      let count = 0;
+
+      function countDown() {
+        if (seconds > 0) {
+          seconds--;
+          document.querySelector("#seconds").innerHTML = seconds;
+        } else {
+          minute--;
+          seconds = 59;
+          document.querySelector("#seconds").innerHTML = seconds;
+          document.querySelector("#minute").innerHTML = minute;
+        }
+      }
+
+      function tenSecondCount() {
+        if (count < 10) {
+          count++;
+          document.querySelector("#result").ins;
+        } else {
+          count = 0;
+        }
+      }
+
+      setInterval(countDown, 1000);
+    </script>
+  </body>
+</html>

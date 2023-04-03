@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <h3>Email</h3>
+    <input type="email" id="email" /><br />
+    <h3>Password</h3>
+    <input type="password" id="password" /><span id="toogle">😁</span> <br />
+    <button id="loginBtn">Login</button>
+
+    <script>
+      let email = document.querySelector("#email");
+      let password = document.querySelector("#password");
+      let loginBtn = document.querySelector("#loginBtn");
+      let tooglePass = document.querySelector("#toogle");
+
+      let accountList = JSON.parse(localStorage.getItem("Account List"));
+
+      function checkLogin() {
+        if (email.value != "" && password.value != "") {
+          if (accountList == null) {
+            alert("Tai khoang khong ton tai");
+          } else {
+            let isCorrect = false;
+            for (let i = 0; i < accountList.length; i++) {
+              if (
+                email.value === accountList[i].email &&
+                password.value === accountList[i].password
+              ) {
+                isCorrect = true;
+                break;
+              }
+            }
+
+            if (isCorrect) {
+              alert("Ban dang nhap thanh cong");
+            } else {
+              alert("Email hoac mat khau khong dung");
+            }
+          }
+        } else {
+          alert("Xin vui long nhap day du thong tin");
+        }
+      }
+
+      loginBtn.addEventListener("click", checkLogin);
+
+      tooglePass.addEventListener("click", () => {
+        password.type === "text"
+          ? (password.type = "password")
+          : (password.type = "text");
+      });
+      tooglePass.addEventListener("click", function () {
+        console.log(password.type);
+      });
+    </script>
+  </body>
+</html>

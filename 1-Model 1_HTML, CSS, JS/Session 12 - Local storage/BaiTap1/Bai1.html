@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Register</h2>
+    <h3>Email</h3>
+    <input type="email" id="email" /><br />
+    <h3>Password</h3>
+    <input type="text" id="password" /><br />
+    <h3>Confirm password</h3>
+    <input type="text" id="confirm" /><br />
+    <button id="registerBtn">Register</button>
+
+    <script>
+      let email = document.querySelector("#email");
+      let password = document.querySelector("#password");
+      let confirmPass = document.querySelector("#confirm");
+      let registerBtn = document.querySelector("#registerBtn");
+      let accountList = JSON.parse(localStorage.getItem("Account List"));
+
+      if (accountList == null) {
+        accountList = [];
+      }
+
+      console.log(accountList);
+
+      function createNewAccount() {
+        if (
+          email.value != "" &&
+          password.value != "" &&
+          confirmPass.value != ""
+        ) {
+          let checkExisting = checkExistingAccount();
+          if (checkExisting) {
+            alert("Tai khoan da ton tai");
+          } else {
+            validatePassword(password, confirmPass);
+          }
+          localStorage.setItem("Account List", JSON.stringify(accountList));
+          alert("Tai khoang duoc tao thanh cong");
+          window.location.href = "login.html";
+          console.log(accountList);
+        } else {
+          alert("Xin vui long nhap day du thong tin");
+        }
+      }
+
+      function checkExistingAccount(someEmail) {
+        for (let i = 0; i < accountList.length; i++) {
+          if (accountList[i].email === email.value) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      }
+
+      function validatePassword(inputPassword, confirmPassword) {
+        if (inputPassword.value === confirmPassword.value) {
+          let newAcc = {
+            email: email.value,
+            password: inputPassword.value,
+          };
+          accountList.push(newAcc);
+        } else {
+          alert("Mat khau va xac nhan mat khau khong khop nhau");
+        }
+      }
+
+      registerBtn.addEventListener("click", createNewAccount);
+    </script>
+  </body>
+</html>
