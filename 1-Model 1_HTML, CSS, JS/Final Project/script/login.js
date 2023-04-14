@@ -205,3 +205,8 @@ let checkExistingEmail = function (accountArr) {
 registerBtn.addEventListener("click", createNewAcc);
 loginBtn.addEventListener("click", checkLogin);
 navRender();
+window.addEventListener("keypress", (e) => {
+  if (e.key == "enter") {
+    checkLogin();
+  }
+});
